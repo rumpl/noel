@@ -1,0 +1,11 @@
+services:
+  back:
+    image: rumpl/hello-node
+    ports:
+      - 8080:8080
+  front:
+    image: nginx
+    volumes:
+      - ./front:/usr/share/nginx/html
+    ports:
+      - 8081:80

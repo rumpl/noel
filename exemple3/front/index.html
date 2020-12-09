@@ -1,0 +1,9 @@
+<h1>Hello from Docker</h1>
+<div id="app"></div>
+<script>
+  fetch("http://localhost:8080/api/hello")
+    .then((res) => res.json())
+    .then((data) => {
+      document.getElementById("app").innerHTML = data.message;
+    });
+</script>
